@@ -1,11 +1,12 @@
 import React from 'react';
-import Heart from 'react-icons/lib/fa/heart';
-
+import Star from 'react-icons/lib/fa/star';
 
 
 const CardDetail = (props) => {
 
 const activeContact = props.activeContact;
+
+
 
   if(!activeContact){
     return <div>...Loading</div>
@@ -19,10 +20,10 @@ const activeContact = props.activeContact;
             <img className='img-rounded img-responsive' src={activeContact.largeImageURL} width="200px" height="200px" />
           </div>
           <div className="col-sm-6 top-info">
-            <h3 className="name">{activeContact.name} <span className="icon"> {(activeContact.favorite ? <Heart /> : console.log('noheart'))}</span></h3>
+            <h2 className="name">{activeContact.name} <span className="icon"> {(activeContact.favorite ? <Star /> : console.log('noStar'))}</span></h2>
             <div className="company-detail">
-              <h5><small>Company: </small></h5>
-              <h5>{activeContact.company}</h5>
+              <h4><small>Company: </small></h4>
+              <h4>{activeContact.company}</h4>
             </div>
           </div>
         </div>
@@ -43,7 +44,7 @@ const activeContact = props.activeContact;
           <div className="col-sm-12">
             <address>
               <h5>{activeContact.address.street}</h5>
-              <h5>{activeContact.address.city}, {activeContact.address.state} {activeContact.address.country}</h5>
+              <h5>{activeContact.address.city}, {activeContact.address.state}</h5>
               <h5>{activeContact.address.zip}</h5>
             </address>
           </div>
@@ -61,7 +62,7 @@ const activeContact = props.activeContact;
             <h5><small>Website: </small></h5>
           </div>
           <div className="col-sm-12">
-            <h5>{activeContact.website}</h5>
+            <h5><a href={activeContact.website}>{activeContact.website}</a></h5>
           </div>
         </div>
         <div className='list-group-item row4 row'>

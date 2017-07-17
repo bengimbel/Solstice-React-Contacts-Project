@@ -51,3 +51,11 @@ span{
 .contact-detail{
   margin-bottom: 20px;
 }
+.icon-list{
+  display: inline;
+  text-align: right;
+  float: right;
+}
+small{
+  color: #777777;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import Heart from 'react-icons/lib/fa/heart';
+import Star from 'react-icons/lib/fa/star';
 
 const CardListItem = (props) => {
   const contact = props.contact;
@@ -15,7 +15,7 @@ const CardListItem = (props) => {
         </div>
         <div className="media-body">
           <div className="media-heading">
-            <h6>{contact.name} <span className="icon-list"> {(contact.favorite ? <Heart /> : console.log('noheart'))}</span></h6>
+            <h6>{contact.name} <span className="icon-list"> {(contact.favorite ? <Star /> : console.log('noStar'))}</span></h6>
             <h6><small>{contact.phone.home}</small></h6>
 
           </div>
