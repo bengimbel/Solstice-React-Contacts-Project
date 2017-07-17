@@ -20,7 +20,7 @@ const activeContact = props.activeContact;
             <img className='img-rounded img-responsive' src={activeContact.largeImageURL} width="200px" height="200px" />
           </div>
           <div className="col-sm-6 top-info">
-            <h2 className="name">{activeContact.name} <span className="icon"> {(activeContact.favorite ? <Star /> : console.log('noStar'))}</span></h2>
+            <h3 className="name">{activeContact.name} <span className="icon"> {(activeContact.favorite ? <Star /> : console.log('noStar'))}</span></h3>
             <div className="company-detail">
               <h4><small>Company: </small></h4>
               <h4>{activeContact.company}</h4>
